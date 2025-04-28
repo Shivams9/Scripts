@@ -1,0 +1,37 @@
+1-get_inspection_id_by_client_id--
+SELECT request_id, inspection_id, payload FROM liberty_claim_log_prod WHERE date_time
+SELECT *  FROM inspection_data_ WHERE client_inspection_id = '{client_id}
+# print(get_inspection_id_by_client_id("400302201123180002601"))
+
+2- get_inspection_id_from_date-
+SELECT inspection_id FROM liberty_claim_data_prod WHERE date_time BETWEEN '{start_date}' AND '{end_date}
+
+3-get_inspection_id_list_between_date-
+"SELECT inspection_id FROM inspection_data_ WHERE client_id = '"+client_id+"' AND inspection_date BETWEEN '"+start_date+"' AND '"+end_date+"
+
+
+-- FOR EU --
+1-TO READ ALL COLUMN-
+select * from inspection_data_ where client_id = 'client_1083';
+2- TO KNOW STATUS - 
+select status from inspection_data_ where client_id ="client_1083";
+3-CLIENT_RESPONSE -
+select * from client_response where inspection_id ="in839820241223182209";
+
+4-| 622320 | client_1083 | NULL          | Not_Available | Not_Available | NULL   | <case_id>            | <unique_session_id>  | NULL      | NULL        | 2024-12-23 13:02:35 | Processing | NULL    | NULL  | NULL   | NULL     | NULL              | 0             | NULL          | NULL         | new | NULL     |            | NULL  | NULL    | Action Needed  | Action Needed | NULL                   | NULL          | NULL              | NULL                   | NULL                     | NULL           | NULL | NULL | NULL      |       NULL | NULL      | NULL        |
+| 622535 | client_1083 | NULL          | Not_Available | Not_Available | NULL   | qzezdqser            | in896920241223182141 | NULL      | NULL  
+ <unique_session_id>
+in896920241223182141
+in839820241223182209
+
+5-DELETE QUEERY FOR 1 INSPECTION_ID
+delete from client_response where inspection_id = "in201420250122072037";
+
+6-To CHECK DATEWISE, CLIENT_ID PROCESSING CASES> 
+select count(*) from inspection_data_ where inspection_date like  "2025-01-04%" and client_id="mahindra_prod" and status="Processing";
+
+7-#to check multiple client id wise how many cases are in processing-----------
+select client_id, count(*) AS inspection_count from inspection_data_ where inspection_date like '2025-01-04%' and client_id in ('mahindra_prod', 'client_1319', 'client_hiib', 'sompo_maruti', 'client_1319') and status = 'Processing' group by client_id;
+
+8-#current status OF PROCESSING CASES OF CLIENT_ID WISE --
+Select client_id, count(inspection_id) from inspection_data_ where inspection_date like "2025-01-04%" and status = 'Processing' group by client_id;

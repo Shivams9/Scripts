@@ -1,0 +1,17 @@
+Testing in dev server 
+cd storage/
+cd storage/json_data/liberty_claim_prod/2024/10/in312020241026171503
+ls to check json file
+1-15(check json file available)
+2-cat file_name>>
+
+
+Open>test.claim.py (dev)
+cd go to file location and run python3 test_claim.py
+Steps-ex=(ensemble) ubuntu@ip-10-50-1-120:~/models/claim_new/claim_module/tests$ python3 test_claim.py 
+
+Step> Open csv file and put part_mapping_id>,client_id>and damaged_parts>partName>front Bumper
+
+Step > python3 test_claim.py (run and get all value in list form/including json form)
+Step >https://codebeautify.org/jsonviewer (open and paste all value [{}] and click rinch icon and right side in view form)
+--------- match value according to vs code and csv file what you have added and what yoy get in output form)

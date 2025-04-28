@@ -1,0 +1,22 @@
+get_inspection_id_list_between_date_eu(FOREGIN)
+LNO--14& 15) ALL Script copy and search move to top -- below and search(ctrl+f)
+
+Q ) ss321gn - Is client I'd ke total inspection id chahiye    (17th Sep, List nikal ke share karo)
+
+
+LNO--555) a = get_inspection_id_list_between_date_eu("2024-09-17", "2024-09-18", "ss321gn")   		 (edit YMD & Client_id)
+LNO--557) print(a) 		 (Comment other print only print Inspection id) (Get ins_id in terminal as in list copy nd share)
+
+
+
+
+
+
+
+
+----------Print After from Line 1000 + -------------
+--------TO RUN THIS ----------
+step 1= source ensemble/bin/activate  (connect to the server)
+
+step 2= cd kashish-scripts
+step 3= python3 salman_utils.py (run command)

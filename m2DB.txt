@@ -1,0 +1,115 @@
+('*' = AlL DATA)
+# mysql coonectionINDIAN- mysql -h inspektlabs-prod-in-mysql.cmgayrbvqpdd.ap-south-1.rds.amazonaws.com -u admin -p
+# password - adsss%$dsdsc*&rwASEQCQ
+step 1= source ensemble/bin/activate  (connect to the server)
+
+step 2= cd kashish-scripts
+step 3= python3 salman_utils.py (run command)
+
+# print(get_inspection_id_by_client_id('20240523T150357052Z7457'))
+liberty_claim-claim parsing
+desc HIIB_data;
+------------------------------------------------------------------------------------------------------
+#TOCHECK DATEWISE AND COUNT OF INS_ID AND CLIENT_WISE--
+1-select count(inspection_id) from inspection_data_ where inspection_date like "2025-01-02%" and status="Processing";
++----------------------+
+| count(inspection_id) |
++----------------------+
+|                   19 |
++----------------------+
+2- select count(*) from inspection_data_ where client_id="client_hiib" and status="Available";
++----------+
+| count(*) |
++----------+
+|    87339 |
++----------+
+3-mysql> select count(*) from inspection_data_ where inspection_date like  "2025-01-02%" and client_id="client_hiib" and status="Available";
++----------+
+| count(*) |
++----------+
+|      159 |
++----------+
+
+#With database--
+---Connection db(salman_utils.py(line-245)
+step1- mysql -h inspektlabs-combined-dev.csttzd8ef1bp.eu-central-1.rds.amazonaws.com -u admin -pcZpyL7NytWBMXWPVz0ch
+---ENTER-2
+STEP2--use inspektlabs; (go in table)
+--DB changed
+200102201124110215501-1
+200102201124180127101
+500204201124180023001-2
+400202201124180083801
+500204202524110016501
+-------mysql> use inspektlabs;
+desc inspection_data_; (all show)
+mysql> desc liberty_claim_log_prod;
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| date_time     | varchar(250) | YES  |     | NULL    |       |
+| file_name     | longtext     | YES  |     | NULL    |       |
+| request_id    | varchar(250) | YES  |     | NULL    |       |
+| inspection_id | varchar(250) | YES  |     | NULL    |       |
+| temp_dir      | varchar(255) | YES  |     | NULL    |       |
+| payload       | longtext     | YES  |     | NULL    |       |
+| response      | varchar(500) | YES  |     | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+1-select * from liberty_claim_log_prod where request_id="200102201124110215501";
+select * from liberty_claim_data_prod where claim_number="200102201124110215501";
+STEP(to show all data)-select * from inspection_data_ where inspection_id="id"; 	
+select * from liberty_claim_data_dev where claim_number="200504201123110089701";
+1.1-select * from liberty_claim_log_dev where file_name="400202201124180083801";
+Database changed   
+1-select * from liberty_claim_log_prod where request_id="200102201124180127101";
+2-select * from liberty_claim_data_prod where claim_number="200102201124180127101";
+3-select * from liberty_claim_log_dev where file_name="500204201124180023001";
+for 2-	
+1-select * from liberty_claim_log_prod where request_id="500204201124180023001";
+
+3-	
+for 3-
+1-select * from liberty_claim_log_prod where request_id="400202201124180083801";
+2-select * from liberty_claim_data_prod where claim_number="400202201124180083801";
+3-select * from liberty_claim_log_dev where file_name="400202201124180083801";
+for 5-
+1-select * from liberty_claim_log_prod where request_id="500204202524110016501";
+2-select * from liberty_claim_data_prod where claim_number="500204202524110016501";
+3-select * from liberty_claim_log_dev where file_name="500204202524110016501";
+available--
+select * from liberty_claim_data_prod where claim_number="500204202524110016501";
+select * from liberty_claim_data_prod where claim_number="200102201124110215501";
+select * from liberty_claim_log_dev where file_name="500204201124180023001";
+select * from liberty_claim_log_prod where request_id="500204201124180023001";
+
+---------mysql> desc liberty_claim_data_prod; 	
+
++---------------+--------------+------+-----+---------+----------------+
+| Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| SNo           | int          | NO   | PRI | NULL    | auto_increment |
+| date_time     | varchar(250) | YES  |     | NULL    |                |
+| request_id    | varchar(250) | YES  |     | NULL    |                |
+| claim_number  | varchar(255) | YES  |     | NULL    |                |
+| inspection_id | varchar(250) | YES  |     | NULL    |                |
+| json_data     | longtext     | YES  |     | NULL    |                |
++---------------+--------------+------+-----+---------+----------------+
+
+TOO CHECK CLIENT_ID BY INSPECTION_ID
+mysql> select client_inspection_id from inspection_data_ WHERE inspection_id="in433420241024064225";
++----------------------+
+| client_inspection_id |
++----------------------+
+| 70000052084          |
++----------------------+
+1 row in set (0.16 sec)
+
+STEP(FIND insection_DATE & recomended_STATUS, remark) 
+--select inspection_data, recomended_status from inspection_data_ where inspection_id = "in840220250107094733"; (jo chaheye , comma lga k value get kar sakte hai)
+
+--ex2--select agent_name,status from inspection_data_ where inspection_id = "in422720240523150357";    (for name and status)
+step2- source ensemble/bin/activate(stepwise= source ensemble(TAB)bin(TAB)activate
+
+step3- cd kashish-scripts/ (press k and then TAB)
+#for-checkinspection id="in422720240523150357";
+select* from inspection_data_ where inspection_id = "in422720240523150357";

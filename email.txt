@@ -1,0 +1,278 @@
+Re: PRE INSPETCION PHOTOS & REPORT REQUIRED / Claim no: RQC0175620 ; Policy no : V0707742 , Loss location : HYDERABAD, TELANGANA
+
+#------------------------------checking----------------------------------------------------
+Hi Kalpik,
+
+We are checking it on priority and will respond shortly.
+
+Best Regards,
+#----------------------------------------------------
+Hi Kalpik,
+
+I hope you are doing well.
+Thank you for your patience and understanding.
+We are unable to share reports related to this case, as this case is more than 6 months old
+
+PFA the mentioned case report attached with this mail. Please check and let me know if it works for you.
+
+Let me know if you need anything else.
+
+
+Regards,
+Shivam
+#------------------------------6months----------------------------------------------------
+Hi Team,
+
+Thanks for your email. I hope you are well.
+
+The mentioned inspection id is 6 months 7 days old from today. As previously mentioned, we do not store these data for more than 6 months old.
+
+If I can help you in any other way, please let me know.
+
+Thanks for understanding.
+#_---------------------__---------------------------------------------------------------------------
+Thanks for your email.
+
+We do not store this date at our end. So therefore we cannot share this with you.
+
+Inspection date column in portal shows case upload date-time. That cannot be altered at the moment.
+
+Can we help you in any other way?
+
+#------------------------------------------------------------------------------------------
+Hi Bhusan,
+Thanks for your email. I hope you are doing well.
+
+Callback of this case in124020250318115153 is gone now and the response we are getting now is  {"AckDoc":1,"Remarks":""}.
+
+Please let me know if you need any further information.
+
+Have a great day!.
+
+Regards,
+Shivam
+#----------------------------------------------------------------------------------------------------------------------------------------
+Hi Jereme,
+
+Thanks for your email. Apologies for any inconvenience.
+
+Regarding pdf changes, can you please go through the entire pdf and list down all necessary changes needed to be made?
+
+Then after confirmation, I will make them in one go.
+
+Thanks for your understanding and cooperation.
+
+Awaiting your response.
+
+Best Regards,
+---------------------------------------
+Hi Sir,
+
+I am writing to request you to leave for 4 days on 22nd Jan 2025 to 25th Jan 2025 as I have urgent work in my hometown. I will resume work from 27th Jan 2025.
+
+I will be thankful to you for considering my application.
+------------------------------------------
+Hi Lokesh,
+
+Thanks for your email. I hope you are well.
+
+I have sent all 3 callbacks again, but kindly confirm whether you have received them.
+
+Because the response we are getting now is: {"AckDoc":0,"Remarks":"Request Expired."}, indicating you might not have received them.
+
+Let me know your thoughts.
+
+Best Regards,
+Shivam
+---------
+Thanks for your email. I hope you are well.
+
+We are in the process of fetching the correct report with all images. Kindly allow me some time. I will update you shortly regarding this.
+
+Thank you for understanding. Have a great day.
+-----------------------------
+In WhatsApp, however, I received only 1 call from you personally at 27 January 2025 16:39. I was in another meeting that time and have requested you to tell me in chats for that time being while I was in the meeting.
+
+We have multiple channels open for you to reach us conveniently, like emails, whatsapp group, whatsapp personal dm, jira tool, phone. And for all those options, queries are addressed quickly. Kindly request you to use all available options as you find convenient.
+
+Regarding the issues or questions of this current mail thread, please mail me your query and I will respond as soon as possible.
+
+Have a great day ahead.
+
+-------------
+Hi Lokesh,Hiib
+
+This message means that some frames of the inspection couldn't be uploaded. However, this doesn't mean that the whole car was not captured in the photos/videos. Please check the ideal in the report to check whether whole car was covered or not
+
+
+
+#--------------------------------------
+Dear [Manager's Name],
+
+I hope you are doing well. I would like to request a half-day leave on 6th February 2025 as I need to attend a family function. I will ensure that all my tasks are managed accordingly and will resume work as usual on 7th February 2025.
+
+Thank you for your consideration. Please let me know if you need any further information.
+
+Best regards,
+[Your Name]
+
+---------------chatGpt--------------
+Answer all these questions on the bahalf of inpektlabs one by one in a tabular format
+behave like you are inpektlabs legal team and write answers like we provide or we have the documents, answer in first person perspective
+--------------------------------------
+Inspection_id report valid 6 month for all , 1 year for hiib "READ CAREFULLY INSPECTION_ID DATE WISE"
+Hi Lokesh,
+
+Thanks for your email. I hope you are well.
+
+We are in the process of fetching the correct report with all images. Kindly allow me some time. I will update you shortly regarding this.
+
+Thank you for understanding. Have a great day.
+
+Best Regards,
+Shivam
+-------
+
+Hi Lokesh,
+
+I appreciate your patience for bearing with me and apologies for the delay.
+
+PFA the correct report.
+
+Let me know if you have any questions regarding this.
+
+Have a great day.
+
+Best Regards,
+---------
+Hi Sanchit Sir,
+
+PFA the questionnaire.
+
+There are some points like :
+     1. Name/position of person responsible for monitoring the partnership:
+     2. Name/position of person responsible for the information/IT Security:
+     3. Names/positions of the Personal Data Protection Ofiicer
+       4.  Last audit was conducted on [insert date] ,
+date, subcontracting and supporting documents attached which are remaining. 
+Please check the whole file once from your side and tell me the things which are red marked so that I can complete it.
+
+
+Regards,
+Shivam
+_-----------------
+Hi Lokesh,
+
+Thanks for your email.
+
+There was some delay in our alert system, which caused this case to go unnoticed. We are looking into its root issue.
+
+However, re-triggering might not work now and we apologize for the inconvenience. In any case, if you still want us to retrigger, please let me know.
+
+Awaiting your response.
+
+##------------------------------------------------------------------------------------------
+Hi Jitendra,
+
+Regarding the report, I can see it working fine and downloadable from the portal. PFA the report attached with this email.
+
+Could you kindly clarify what you meant here?
+###------------------------------------------------------------------------------------------Hiib
+Hi Lokesh,
+
+Thanks for your email.
+
+We have retriggered this response from our end. I hope you have received it now.
+#-----------------------------------------------------------------------------------------------
+Hi Chandresh,
+
+Just a quick clarification— please note that the correct date of the file is 30-03-2025.
+
+#-----------------------------------------------------------------------------------------------
+------------templates on what we reply to customer when labeler capacity is an issue?
+
+Dear [Customer's Name],
+
+Thank you for bringing this matter to our attention.
+
+It appears the case was delayed in our processing queue due to an unexpected error on our end. We sincerely apologize for any inconvenience this may have caused and appreciate your patience and understanding.
+
+We are actively reviewing the issue and expect to have it fully resolved within the next week. Please rest assured that we are committed to preventing similar delays in the future.
+
+Thank you once again for your patience and for giving us the opportunity to address this matter.
+
+Apologies for the confusion.
+#2------------------------------------------------------------------------------------2-----------
+Hi Chandresh,
+Thanks for your email. Apologies for any inconvenience.
+
+We are checking it on priority and will respond shortly.
+
+Thanks for your understanding and cooperation.
+##3------------------------------------------------------------------------------------3-----------
+Hi Chandresh,
+
+Thanks for your email. Apologies for any inconvenience.
+
+All the cases you mentioned in the attachment file dated 30-01-2025 are available. Please review from your end and let me know if we have missed any.  
+
+Thanks for your understanding and cooperation.
+
+Have a great day.
+#4 ##------------------------------------------------------------------------------------4-----------
+I have sent all 3 callbacks again, but kindly confirm whether you have received them.
+
+Because the response we are getting now is: {"AckDoc":0,"Remarks":"Request Expired."}, indicating you might not have received them.
+
+Let me know your thoughts.
+#5------------------------------------------callbackOF_Hiib---------------------
+Hi Team,
+
+From our end, the callback response is gone.
+
+We received: {"AckDoc":1,"Remarks":""}
+##------------------------------------------------------------------------------------
+Thanks for your email. I hope you are well.
+
+Callback of this case in275420250405091036 is gone now and we received: {"AckDoc":1,"Remarks":""}. Please check on your end and confirm.
+
+Have a nice day.
+##------------------------------------------------------------------------------------
+
+Hi Lokesh,
+Thank you for your email.
+
+We are reviewed the logs on our end and would like to share the relevant details for your reference:
+
+Batch Hit Time: 2025-04-10 11:41:56
+
+Callback Response Time: 2025-04-10 11:47:39
+
+Callback Response: {"AckDoc":0,"Remarks":"No files selected."}
+
+As per the above timestamps, the callback was successfully triggered from our side well within the expected timeframe. It appears that the callback was processed correctly, but the response indicates that no files were selected during the transmission.
+
+We would appreciate it if you could review the configuration at your end and confirm whether the callback was successfully received and processed.
+
+Please let us know if further assistance is needed. We are happy to coordinate closely to ensure smooth operations going forward.
+
+Regards,
+Shivam
+
+##------------------------------------------------------------------------------------
+Analyzed the client_gtmotive hit time and response time of the cases and emailed them accordinglyAnalyzed the client_gtmotive hit time and response time of the cases and emailed them accordingly
+
+I hope you are doing well.
+Thank you for your understanding and continued support. Please feel free to reach out if you have any questions or need further details.
+#------------------------------------------------------------
+Sorry for the issue. For a few hours on Friday, we had an issue due to which response time was high (> 40 min) for ~40 inspections. It wasn't a technical issue but a server load issue. Our load has increased quite a bit and we are trying to optimise the servers
+
+@#-------------------------------------------------------------------------------------GT dekra_nl_prod
+Hi  Alain,
+
+Thank you for bringing this to our attention.
+The inspection_id in781120250401140120 is now available on the portal. You can check it on your side and confirm.
+
+The issue occurred due to an unexpected error on our end. We sincerely apologize for any inconvenience this may have caused and truly appreciate your patience and understanding.
+
+Please let us know if everything looks good or if you need any further assistance.

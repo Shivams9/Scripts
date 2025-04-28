@@ -1,0 +1,75 @@
+# mysql coonectionINDIAN- mysql -h inspektlabs-prod-in-mysql.cmgayrbvqpdd.ap-south-1.rds.amazonaws.com -u admin -p
+# password - adsss%$dsdsc*&rwASEQCQ
+select client_id, status from inspection_data_ where inspection_id ="in781120250401140120";
+
+1#_CHECK CALLBACK DATEWISE --  
+	
+select * from client_response where time like "2025-04-15%" and client_id="client_hiib";
+select inspection_id,client_id, time from client_response where time like "2025-04-08%" and client_id="client_gtmotive";
+
+2# time hit inspection_id-- 
+select inspection_id, status,inspection_date from inspection_data_ where inspection_date like"2025-04-08%" and client_id="client_gtmotive" and status ='available';
+
+
+3#count of available/processing cases - 
+
+select inspection_id, status from inspection_data_ where client_id ="client_1138_prod" and status = "processing";
+select * from client_response where client_id ="client_gtmotive" and  time like '2025-04-08%';
+
+4#for all days 
+select inspection_id, status, inspection_date from inspection_data_ where client_id ="client_1402_prod" and status = "available";
+
+5# check processing batches date wise
+select client_id, count(inspection_id) from inspection_data_ where inspection_date like "2025-04-07%" and status = "processing" group by client_id;
+
+5#_Count of callback response inspection_id - 
+select * from client_response where  and client_id="client_1402_prod"; 
+
+6#Delete Querry--
+1>>>= delete from client_response where inspection_id in ('in644120250409005443', 'in944420250408181415', 'in508720250409095254', 'in928620250408132801', 'in262820250408152607');
+delete from client_response where inspection_id in ('in711620250407045252', 'in729420250407230722', 'in502120250407153401');
+7#check client_id wise processing batches date wise
+Select client_id, count(inspection_id) from inspection_data_ where inspection_date like "2025-03-27%" and status = 'Processing' group by client_id;  
+
+delete from client_response where inspection_id ="in891620250416030543";
+8#client_response multiple
+#select * from client_response where inspection_id in ('in644120250409005443', 'in944420250408181415', 'in508720250409095254', 'in928620250408132801', 'in262820250408152607');
+
+9#for individual
+select * from client_response where inspection_id ="in423320250412135402";
+
+10#HIIB_data by reference_no
+select inspectionID from HIIB_data where VISoFUniqueReferenceNo = "HIIB13530650";
+
+11#check available or not liberty_prodci in db ---- LB0925578
+select * from liberty_prodci_info where case_id in ("LB0942831","LB0942673","LB0942829","LB0942583");
+
+12#check status of ins_id from inspection_data_  -------------------------
+select client_id,status, message from inspection_data_ whata_ where inspection_id ="in964520250327084948";
+select client_id,status, message from inspection_data_ whata_ where inspection_id in ('in118420250327101025 ', 'in549120250327085412 ', 'in706320250327085437 ', 'in285920250327093258 ', 'in652220250327095515 ', 'in608520250327100646 ', 'in231520250327100639', 'in379320250327101023', 'in103420250327100535', 'in358020250327100305', 'in274020250327100014', 'in719920250327095415', 'in495420250327095358');
+
+
+#Table name--
+liberty_prodci_info   select * from client_response where inspection_id in ('in320720250323175924','in916420250323180216');
+client_response
+
+#--------------for HIIB_data table ----------Getting inspection_id 
+select inspectionId, caseId, status from HIIB_data where VISoFUniqueReferenceNo = "HIIB14776853";
+
+##--------
+#without 'available'
+select inspection_id, status, inspection_date from inspection_data_ where client_id = "client_1402_prod" and  inspection_date between '2025-03-17 00:00:00' and '2025-03-19 23:59:59' order by inspection_date asc;
+#status 'available'
+select inspection_id, status, inspection_date from inspection_data_ where client_id = "client_1402_prod" and status ='rejected' and inspection_date between '2025-03-17 00:00:00' and '2025-03-19 23:59:59' order by inspection_date asc;
+
+
+#----------------------------------------------------------------------------------------------------------------------
+
+#Batch Hit time
+select inspection_id, status,inspection_date from inspection_data_ where inspection_date like"2025-04-08%" and client_id="client_gtmotive" and status ='available';
+
+select inspection_id, status,inspection_date from inspection_data_ where inspection_id = "in172520250408153246" ;
+#Response ( callbackTime)
+ select inspection_id,client_id, time from client_response where time like "2025-04-08%" and client_id="client_gtmotive";
+
+#----------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,32 @@
+('*' = AlL DATA)
+step 1= source ensemble/bin/activate  (connect to the server)
+
+step 2= cd kashish-scripts
+step 3= python3 salman_utils.py (run command)
+
+# print(get_inspection_id_by_client_id('20240523T150357052Z7457'))
+
+
+
+#With database--
+---Connection db(salman_utils.py(line-245)
+step1- mysql -h inspektlabs-combined-dev.csttzd8ef1bp.eu-central-1.rds.amazonaws.com -u admin -pcZpyL7NytWBMXWPVz0ch
+
+STEP2--use inspektlabs; (go in table)
+--DB changed
+desc inspection_data_; (all show)
+
+STEP(to show all data)-select * from inspection_data_where inspection_id="id"; 
+
+STEP(FIND insection_DATE & recomended_STATUS, remark) 
+--select inspection_data,recomended_status from inspection_data_where inspection_id="id(in122123434)"; (jo chaheye , comma lga k value get kar sakte hai)
+
+--ex2--select agent_name,status from inspection_data_ where inspection_id = "in422720240523150357";    (for name and status)
+step2- source ensemble/bin/activate(stepwise= source ensemble(TAB)bin(TAB)activate
+
+step3- cd kashish-scripts/ (press k and then TAB)
+#for-checkinspection id="in422720240523150357";
+select* from inspection_data_ where inspection_id = "in422720240523150357";
+
+
+#sudo reboot

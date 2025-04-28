@@ -1,0 +1,190 @@
+1)EU_CLIENT-> mysql -h inspektlabs-prod-eu-mysql.csttzd8ef1bp.eu-central-1.rds.amazonaws.com -u admin -pcKmhcX2KFfAytyZhKaX1
+>>>source ensemble/bin/activate
+
+# mysql coonectionINDIAN- mysql -h inspektlabs-prod-in-mysql.cmgayrbvqpdd.ap-south-1.rds.amazonaws.com -u admin -p
+# password - adsss%$dsdsc*&rwASEQCQ
+# mysql coonection_eu- mysql -h inspektlabs-prod-eu-mysql.csttzd8ef1bp.eu-central-1.rds.amazonaws.com -u admin -p
+#password -  cKmhcX2KFfAytyZhKaX1
+
+#exit to back and ctrl+c to CUT
+#TOCHECK DATEWISE AND COUNT OF INS_ID AND CLIENT_WISE--
+1-select count(inspection_id) from inspection_data_ where  inspection_date like "2025-01-04%" and  status="Processing";
++----------------------+
+| count(inspection_id) |
++----------------------+
+|                   19 |
++----------------------+
+2- select count(*) from inspection_data_ where client_id="client_hiib" and date like ="30-03-2025%" and status="Processing";
++----------+
+| count(*) |third parties, temporary workers or freelancers for specific projects
++----------+
+|    87339 |
++----------+
+3-To CHECK DATEWISE, CLIENT_ID PROCESSING CASES> 
+select count(*) from inspection_data_ where inspection_date like  "2025-04-08%" and client_id="client_gtmotive" and status="available";
+'in653520250325152809','in506620250325235638'
+
+
++----------+
+| count(*) |
++----------+
+|      159 |			
++----------+
+in168720241018074007
+in562320250122071710
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#________CHECK_HITTTIME_AND_CALLBACK_RESPONSE_TIME_________
+mysql> select inspection_id, status,inspection_date from inspection_data_ where inspection_id ="in102320250411150848";                |
++----------------------+-----------+---------------------+									       |
+| inspection_id        | status    | inspection_date     									       |
++----------------------+-----------+---------------------+								                       |
+| in455320250329113409 | Available | 2025-03-29 11:35:35 								       |
++----------------------+-----------+---------------------+
+1 row in set (0.19 sec)
+
+mysql> select * from client_response where inspection_id ="in431620250410113934";
++----------------------+-------------+-------------------------------------------+---------------------+
+| inspection_id        | client_id   | response_json                             | time                					        |
++----------------------+-------------+-------------------------------------------+---------------------+ 					        |
+| in455320250329113409 | client_hiib | {"AckDoc":0,"Remarks":"Request Expired."} | 2025-03-31 05:59:51                                               |
++----------------------+-------------+-------------------------------------------+---------------------+
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Delete Querry--
+1>>>= delete from client_response where inspection_id = "in539220250311052341";
+
+2)RESPONCE->1- for Indian Client--Liberty_claim_prod
+mysql> select * from client_response where inspection_id ="in538020250318112906";
+select * from client_response where client_id ="client_gtmotive" and  time like '2025-04-08%';
+
+select * from client_response where client_id ="liberty_prodci" and  inspection_id =['in987920250302130548 in628820250302101544 in608620250302093526 in157420250302091530 in374020250302101541 in967720250302130541 in754920250302105518 in111520250302113523'];
++----------------------+--------------------+------------------------------------------------+---------------------+
+| inspection_id        | client_id          | response_json                                  | time                |
++----------------------+--------------------+------------------------------------------------+---------------------+
+| in481920241010074745 | liberty_claim_prod | {"response":"\"success\"","status":"success"}
+ | 2024-10-10 08:03:28 |
++----------------------+--------------------+------------------------------------------------+---------------------+
+
+2-Responce-For Eu Client--Hiib
+step-1 	
+step-2 use inspektlabs;
+step-3 select * from client_response where inspection_id ="in574520250301074601";
+3-Check client_response for datewise
+	3.1)To Show All column--- desc client_response; ------- 
+
+3.2) select * from client_response where client_id="client_hiib" and date(time) like "2025-03-11%";
+Correct -select * from client_response where client_id="client_1257_uat" and  time like '2025-03-05%';
+
+
++----------------------+-------------+---------------------------+---------------------+
+| inspection_id        | client_id   | response_json             | time                |
++----------------------+-------------+---------------------------+---------------------+
+| in210120241010081858 | client_hiib | {"AckDoc":1,"Remarks":""} | 2024-10-10 08:27:16 |
++----------------------+-------------+---------------------------+---------------------+
+
+#AckDoc: 1 (callBackSent) or Anyother AckDoc: 0, NA (Callback Not sent)
+
+----------------------------------
+COUNTOFINSPECTION LIST-
+select count(*) as total_cases from client_response where client_id="client_1257_uat" and  time like '2025-03-05%';
++-------------+
+| total_cases |
++-------------+
+|           0 |
++-------------+
+
+#to check multiple client id wise how many cases are in processing-----------
+select client_id, count(*) AS inspection_count from inspection_data_ where inspection_date like '2025-03-27%' and client_id in ('mahindra_prod', 'client_1319', 'client_hiib', 'sompo_maruti', 'client_1319') and status = 'Processing' group by client_id;
+
++---------------+------------------+
+| client_id     | inspection_count |
++---------------+------------------+
+| mahindra_prod |              106 |
+| client_1319   |               55 |
+| sompo_maruti  |               17 |
+| client_hiib   |                9 |
++---------------+------------------+
+select client_id, count(*) as inspection_count from inspection_data_ where inspection_date LIKE '2025-01-04%' and client_id in ('mahindra_prod', 'client_1319', 'client_hiib', 'sompo_maruti', 'technoredar', 'client_594', 'client_876', 'autogroup', 'liberty_prodci', 'sompo_mahindra', 'technoredar') and status = 'Processing' group by client_id;
++----------------+------------------+
+| client_id      | inspection_count |
++----------------+------------------+
+| mahindra_prod  |               86 |
+| client_1319    |               50 |
+| sompo_mahindra |                2 |
+| sompo_maruti   |               17 |
+| client_hiib    |                2 |
+| client_594     |                1 |
+| client_876     |                1 |
+| technoredar    |                1 |
+#Over all by date 
+Select client_id, count(inspection_id) from inspection_data_ where inspection_date like "2025-03-30%" group by client_id;
+-----------------+----------------------+
+| easyautotech    |                    6 |
+| letcl_uat       |                    4 |
+| client_hiib     |                  624 |
+| client_miop_uat |                    4 |
+| client_876      |                   11 |
+| mahindra_prod   |                  368 |
+| inch_singapore  |                    4 |
+| sompo_maruti    |                  195 |
+| sompo_mahindra  |                   53 |
+| autogroup       |                   25 |
+| client_1319     |                  425 |
+| admin_raheja    |                    2 |
+| technoredar     |                   28 |
+| nos_agents      |                    1 |
+| client_594      |                    9 |
+| client_829      |                   11 |
+| client_409      |                    2 |
+| client_1050     |                    1 |
+| client_898      |                    3 |
+| dekra_nl_prod   |                    6 |
+| client_1257     |                    1 |
+| client_gtmotive |                    2 |
+| lolocar_prod    |                    2 |
+| client_1053     |                    1 |
+| generali_demo   |                    1 |
++-----------------+----------------------+
+#current status OF PROCESSING CASES OF CLIENT_ID WISE --
+Select client_id, count(inspection_id) from inspection_data_ where inspection_date like "2025-04-09%" and status = 'available' group by client_id;
++----------------+----------------------+
+| client_id      | count(inspection_id) |
++----------------+----------------------+
+| mahindra_prod  |                   54 |
+| client_1319    |                   44 |
+| sompo_maruti   |                   17 |
+| sompo_mahindra |                    1 |
+| letcl_uat      |                    3 |
+| client_hiib    |                    2 |
+__________---------------_____________---------------____________________ Hiib_ENQUIRY----------
+1--select * from HIIB_data where inspectionId="in188020250412073803";
+
+2--- select * from user_data_ where client_id="client_hiib";
+
+3-- update HIIB_data set MiddleName="" where inspectionId="in188020250412073803";
+__________---------------_____________---------------____________________
+
+sudo reboot
+1)proxy-in-prod--scanReports
+2)proxy-hiib---hiib portal 
+______------_-_-_-Delete Querry-
+delete from client_response where inspection_id = "in275720250202075812";
+-------__________________--------------_________________------------------"2025-02-06", "2025-02-19"
+
+1 row in set (0.48 sec) batche hit hota hai callback jana hota hai, callback nhi ja pataload ke wajah se hota hai after processing jab callbacek janahi paya esleye badgateway , last stage me jake atak gya hai
+na- koi marge, processing me stuck ho ya koi stuck ho gya ho us case me na aa jata hai json nhi ban paya,
+
+
+SELECT inspection_id, client_inspection_id, inspection_date, status,message  FROM inspection_data_ WHERE client_id = '"+client_id+"' AND inspection_date BETWEEN '"+start_date+"' AND '"+end_date+"'")
+select inspection_id, inspection_id, inspection_date, status, message from inspection_data_ where client_id = 'client_hiib' and status = 'processing' and inspection_date = '2025-02-13';
+
+-------__________________--------------_________________-------------------------_____PDF FROM AWS_____________--------------_________________------------------
+Amazon S3>Buckets>inspektlabs-eu>reports/>client_876/>2025/>04/>in888320250403223206/
+_-------------------
+-------__________________--------------_________________------------------
+Hi Lokesh,
+
+Thanks for your email.
+
+The callback response with the correct pdf is gone now. Kindly check and confirm the same.
+
+Have a nice day.
